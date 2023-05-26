@@ -140,11 +140,19 @@ $verde └══>$azul Longitud:$cyan $longitude
 fi 
 elif [ ${PACK} = 4 ]; then
 echo "instalando seeker"
+git clone https://github.com/thewhiteh4t/seeker.git
+
+cd seeker/
+
+chmod +x install.sh
+
+./install.sh
 elif [ ${PACK} = 5 ]; then
 echo "gracias por usar pack "
 exit
 else
 echo  -e "$azul[${verde}>${cyan} LA OPCION $azul$PACK$cyan NO EXISTE$verde <$azul] "
+
 
 fi 
 
